@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">CommerceJunction</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="email_hint">Enter email-id</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="forgot_password_text">Forgot Password?</string>
+    <string name="register_new">Don\'t have an account? Register!</string>
+    <string name="registration_head_tv">Registration</string>
+    <string name="registration_name_editText">Name</string>
+    <string name="registration_email_editText">Email-id</string>
+    <string name="registration_contact_editText">Contact Number</string>
+    <string name="registration_password_editText">Password</string>
+    <string name="registration_confirmPassword_editText">Confirm Password</string>
+    <string name="registration_registerButton">Register</string>
+    <string name="registration_signin">Already have an account ? <u>sign in</u></string>
+    <string name="forgotPassword_email_editText">\tEmail-id</string>
+    <string name="forgotPassword_button_text">RESET PASSWORD</string>
+    <string name="forgot_passwordPage_head1">Forgot Password?</string>
+    <string name="forgot_passwordPage_head2">We just need your registered email address</string>
 </resources>

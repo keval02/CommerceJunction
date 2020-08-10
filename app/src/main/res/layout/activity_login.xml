@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_marginBottom="0dp"
+    android:background="@color/colorLoginPageBackground"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/loginActivityIV"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/busy_student" />
+
+    <TextView
+        android:id="@+id/Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="30dp"
+        android:text="Login"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorLoginPage"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardCornerRadius="@dimen/card_radius"
+        android:layout_marginBottom="@dimen/card_margin_bottom">
+
+        <EditText
+            android:id="@+id/emailTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/edittext_padding"
+            android:background="@color/edittextBackground"
+            android:hint="Enter Email-id"
+            android:inputType="textEmailAddress" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardCornerRadius="@dimen/card_radius"
+        android:layout_marginBottom="@dimen/card_margin_bottom">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/edittext_padding"
+            android:background="@color/edittextBackground"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/login_button_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/cardBackgrouund"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorLoginPage"
+            android:text="@string/login_button_text"
+            android:textColor="@color/buttonText"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/forgotPasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/forgot_password_height"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/forgot_password_bottom_margin"
+        android:textStyle="normal"
+        android:text="@string/forgot_password_text" />
+
+
+    <TextView
+        android:id="@+id/registerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/register_new_height"
+        android:layout_gravity="center"
+        android:text="@string/register_new"
+        android:textStyle="normal" />
+
+</LinearLayout>

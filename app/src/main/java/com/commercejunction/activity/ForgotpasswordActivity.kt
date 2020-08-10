@@ -1,11 +1,12 @@
-package com.commercejunction
+package com.commercejunction.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.commercejunction.R
 
-class MainActivity : AppCompatActivity() {
+class ForgotpasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_forgotpassword)
     }
 }

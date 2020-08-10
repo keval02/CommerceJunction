@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.RegistrationActivity">
+
+    <TextView
+        android:id="@+id/registrationTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/registration_head_tv_margin_top"
+        android:layout_marginBottom="@dimen/registration_head_tv_margin_bottom"
+        android:gravity="center"
+        android:text="@string/registration_head_tv"
+        android:textSize="@dimen/registration_head_tv_textSize"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="@dimen/card_margin_bottom"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <EditText
+            android:id="@+id/userNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edittextBackground"
+            android:hint="@string/registration_name_editText"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/edittext_padding" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="@dimen/card_margin_bottom"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <EditText
+            android:id="@+id/userEmailIdTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edittextBackground"
+            android:hint="@string/registration_email_editText"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/edittext_padding" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="@dimen/card_margin_bottom"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <EditText
+            android:id="@+id/userContactTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edittextBackground"
+            android:hint="@string/registration_contact_editText"
+            android:inputType="phone"
+            android:paddingStart="@dimen/edittext_padding" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="@dimen/card_margin_bottom"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <EditText
+            android:id="@+id/userSetPasswordTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edittextBackground"
+            android:hint="@string/registration_password_editText"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/edittext_padding" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginBottom="@dimen/card_margin_bottom1"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <EditText
+            android:id="@+id/userConfirmPasswordTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edittextBackground"
+            android:hint="@string/registration_confirmPassword_editText"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/edittext_padding" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/registration_button_width"
+        android:layout_height="@dimen/card_height"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <Button
+            android:id="@+id/forgotButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorLoginPage"
+            android:text="@string/registration_registerButton"
+            android:textColor="@color/buttonText"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/signinLinkTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/registration_signin"
+        android:textSize="18sp" />
+
+</LinearLayout>

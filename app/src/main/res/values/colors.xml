@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#9E9E9E</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorLoginPage">#616161</color>
+    <color name="colorLoginPageBackground">#ffffff</color>
+    <color name="colorRegistrationPage">#616161</color>
+    <color name="cardBackgrouund">#9E9E9E</color>
+    <color name="edittextBackground">#ffffff</color>
+    <color name="buttonText">#FFFFFF</color>
+    <color name="signinLink">#1B35EF</color>
 </resources>
