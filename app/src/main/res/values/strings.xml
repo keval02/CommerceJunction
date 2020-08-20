@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">CommerceJunction</string>
+    <!-- Login Activity -->
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -9,6 +10,7 @@
     <string name="login_button_text">Login</string>
     <string name="forgot_password_text">Forgot Password?</string>
     <string name="register_new">Don\'t have an account? Register!</string>
+    <!-- Registration Activity -->
     <string name="registration_head_tv">Registration</string>
     <string name="registration_name_editText">Name</string>
     <string name="registration_email_editText">Email-id</string>
@@ -17,8 +19,47 @@
     <string name="registration_confirmPassword_editText">Confirm Password</string>
     <string name="registration_registerButton">Register</string>
     <string name="registration_signin">Already have an account ? <u>sign in</u></string>
+    <!-- Forgot Password Activity -->
     <string name="forgotPassword_email_editText">\tEmail-id</string>
     <string name="forgotPassword_button_text">RESET PASSWORD</string>
     <string name="forgot_passwordPage_head1">Forgot Password?</string>
     <string name="forgot_passwordPage_head2">We just need your registered email address</string>
+    <!-- Board Activity -->
+    <string name="board_title">Board</string>
+    <string name="boardTV_Gujarati">GSEB - Gujarati</string>
+    <string name="boardTV_English">GSEB - English</string>
+    <string name="headTV_Standard">Standard</string>
+    <string name="headTV_Primary">Primary</string>
+    <string name="headTV_Secondary">Secondary</string>
+    <string name="headTV_Higher_Secondary">Higher Secondary</string>
+    <string name="class_1">Class 1</string>
+    <string name="class_2">Class 2</string>
+    <string name="class_3">Class 3</string>
+    <string name="class_4">Class 4</string>
+    <string name="class_5">Class 5</string>
+    <string name="class_6">Class 6</string>
+    <string name="class_7">Class 7</string>
+    <string name="class_8">Class 8</string>
+    <string name="class_9">Class 9</string>
+    <string name="class_10">Class 10</string>
+    <string name="class_11_comm">Class 11\nCommerce</string>
+    <string name="class_11_arts">Class 11\nArts</string>
+    <string name="class_11_sci">Class 11\nScience</string>
+    <string name="class_12_comm">Class 12\nCommerce</string>
+    <string name="class_12_arts">Class 12\nArts</string>
+    <string name="class_12_sci">Class 12\nScience</string>
+    <string name="title_activity_stdmain">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- Drawer Strings -->
+    <string name="close_drawer">Closing</string>
+    <string name="open_drawer">Opening</string>
 </resources>

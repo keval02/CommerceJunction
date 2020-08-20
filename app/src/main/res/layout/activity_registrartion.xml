@@ -126,9 +126,9 @@
         android:id="@+id/signinLinkTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/registration_signinActivity_marginTop"
         android:gravity="center"
         android:text="@string/registration_signin"
-        android:textSize="18sp" />
+        android:textSize="@dimen/regidtration_text" />
 
 </LinearLayout>

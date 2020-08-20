@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.BoardActivity">
+
+    <TextView
+        android:id="@+id/boardTV2"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:gravity="center"
+        android:text="@string/board_title"
+        android:textColor="@color/colorUniversalforApp"
+        android:textSize="@dimen/textView_Size"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_divider_height"
+        android:background="?android:attr/listDivider" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width_board"
+        android:layout_height="@dimen/card_height_board"
+        android:layout_marginTop="@dimen/card_margin_top_board"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/card_radius_board">
+
+        <TextView
+            android:id="@+id/boardGujTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/colorUniversalforApp"
+            android:text="@string/boardTV_Gujarati"
+            android:textSize="@dimen/textView_Size" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/card_width_board"
+        android:layout_height="@dimen/card_height_board"
+        android:layout_marginTop="@dimen/card_margin_top_board"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/card_radius_board">
+
+        <TextView
+            android:id="@+id/boardEngTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/colorUniversalforApp"
+            android:text="@string/boardTV_English"
+            android:textSize="@dimen/textView_Size" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

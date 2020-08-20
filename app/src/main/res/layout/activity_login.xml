@@ -15,8 +15,8 @@
     <ImageView
         android:id="@+id/loginActivityIV"
         android:layout_width="match_parent"
-        android:layout_height="226dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="@dimen/login_image_height"
+        android:layout_marginBottom="@dimen/login_image_margin_bottom"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/busy_student" />
 
@@ -24,18 +24,14 @@
         android:id="@+id/Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginStart="@dimen/login_text_margin_start"
+        android:layout_marginBottom="@dimen/login_text_margin_bottom"
         android:text="Login"
         android:textAlignment="textStart"
         android:textColor="@color/colorLoginPage"
-        android:textSize="24sp"
+        android:textSize="@dimen/login_text_size"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        />
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/card_width"
@@ -50,7 +46,7 @@
             android:layout_height="match_parent"
             android:paddingStart="@dimen/edittext_padding"
             android:background="@color/edittextBackground"
-            android:hint="Enter Email-id"
+            android:hint="@string/email_hint"
             android:inputType="textEmailAddress" />
     </androidx.cardview.widget.CardView>
 
@@ -74,7 +70,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/login_button_width"
         android:layout_height="@dimen/card_height"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/card_margin_bottom"
         app:cardBackgroundColor="@color/cardBackgrouund"
         app:cardCornerRadius="@dimen/card_radius"
         app:cardElevation="@dimen/card_elevation">

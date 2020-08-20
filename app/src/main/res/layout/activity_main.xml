@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/main_activity_image_height"
         android:layout_weight="1"
         android:scaleType="fitXY"
         android:src="@drawable/op" />
@@ -19,7 +19,7 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/main_activity_image_height"
         android:layout_weight="1"
         android:layout_gravity="center"
         app:srcCompat="@drawable/logo" />
