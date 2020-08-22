@@ -12,7 +12,7 @@ class GujaratiMediumActivity : AppCompatActivity() {
         setContentView(R.layout.activity_gujarati_medium)
 
         std1.setOnClickListener(){
-            val  intent = Intent(this,Std1Activity::class.java)
+            val  intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
             finish()
         }

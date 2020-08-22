@@ -12,4 +12,6 @@
     <color name="gridBackground">#ffffff</color>
     <color name="signinLink">#1B35EF</color>
     <color name="buttonClicked">#FFCDD2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkGrey">#757575</color>
 </resources>
