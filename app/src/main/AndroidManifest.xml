@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Std1Activity" />
+        <activity android:name="com.commercejunction.activity.Std1Activity"></activity>
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.GujaratiMediumActivity" />
         <activity android:name=".activity.BoardActivity" />
         <activity android:name=".activity.ForgotpasswordActivity" />
+        <activity android:name=".activity.MyprofileActivity"/>
         <activity android:name=".activity.RegistrationActivity" />
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.MyprofileActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

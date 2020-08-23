@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".activity.RegistrationActivity">
+    tools:context="com.commercejunction.activity.RegistrationActivity">
 
     <TextView
         android:id="@+id/registrationTV"
@@ -112,7 +112,7 @@
         app:cardElevation="@dimen/card_elevation">
 
         <Button
-            android:id="@+id/forgotButton"
+            android:id="@+id/registrationButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"

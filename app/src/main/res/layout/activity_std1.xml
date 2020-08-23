@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Subjects"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:textSize="20sp" />
 
     <View
@@ -25,39 +27,85 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="match_parent">
+        android:paddingLeft="10dp"
+        android:layout_marginTop="@dimen/grid_margin_top"
+        android:layout_marginBottom="@dimen/grid_margin_bottom"
+        app:columnCount="2">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="201dp"
-            android:layout_height="115dp"
-            android:text="Button"
-            app:layout_column="0"
-            app:layout_row="0" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="182dp"
-            android:layout_height="118dp"
-            android:text="Button"
+            android:id="@+id/subject2"
+            android:layout_width="@dimen/grid_button_width"
+            android:layout_height="@dimen/grid_button_height"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:background="@drawable/grid_button_radius"
+            android:drawableTop="@drawable/ic_book_icon"
+            android:paddingLeft="@dimen/padding_left"
+            android:paddingTop="@dimen/padding_top"
+            android:paddingRight="@dimen/padding_right"
+            android:paddingBottom="@dimen/padding_bottom"
+            android:text="Subject 2"
             app:layout_column="1"
             app:layout_row="0" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="197dp"
-            android:layout_height="119dp"
-            android:text="Button"
+            android:id="@+id/subject1"
+            android:layout_width="@dimen/grid_button_width"
+            android:layout_height="@dimen/grid_button_height"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:background="@drawable/grid_button_radius"
+            android:drawableTop="@drawable/ic_book_icon"
+            android:paddingLeft="@dimen/padding_left"
+            android:paddingTop="@dimen/padding_top"
+            android:paddingRight="@dimen/padding_right"
+            android:paddingBottom="@dimen/padding_bottom"
+            android:text="Subject 1"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/subject3"
+            android:layout_width="@dimen/grid_button_width"
+            android:layout_height="@dimen/grid_button_height"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/grid_button_radius"
+            android:drawableTop="@drawable/ic_book_icon"
+            android:paddingLeft="@dimen/padding_left"
+            android:paddingTop="@dimen/padding_top"
+            android:paddingRight="@dimen/padding_right"
+            android:paddingBottom="@dimen/padding_bottom"
+            android:text="Subject 3"
             app:layout_column="0"
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button4"
-            android:layout_width="178dp"
-            android:layout_height="115dp"
-            android:text="Button"
-            app:layout_column="1"
-            app:layout_row="1" />
+            android:id="@+id/subject4"
+            android:layout_width="@dimen/grid_button_width"
+            android:layout_height="@dimen/grid_button_height"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/grid_button_radius"
+            android:drawableTop="@drawable/ic_book_icon"
+            android:paddingLeft="@dimen/padding_left"
+            android:paddingTop="@dimen/padding_top"
+            android:paddingRight="@dimen/padding_right"
+            android:paddingBottom="@dimen/padding_bottom"
+            android:text="Subject 4" />
+
+
     </androidx.gridlayout.widget.GridLayout>
+
+
+
+
 </LinearLayout>

@@ -52,7 +52,7 @@ open class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
     @SuppressLint("ResourceType")
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
-        val id: Int = p0.getItemId()
+        val id: Int = p0.itemId
         if (id == R.id.my_profile) {
             val intent = Intent(applicationContext, MyprofileActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
