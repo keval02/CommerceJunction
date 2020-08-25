@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical"
     android:background="@drawable/bg_study_app"
-    tools:context=".activity.BoardActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
 
     <TextView
-        android:id="@+id/boardTV2"
+        android:id="@+id/subjectHead"
         android:layout_width="match_parent"
-        android:layout_height="69dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="@string/board_title"
-        android:textColor="@color/colorUniversalforApp"
-        android:textSize="@dimen/textView_Size"
-        android:textStyle="bold"/>
+        android:text="Subject 1"
+        android:textSize="24sp" />
 
     <View
-        android:id="@+id/divider"
+        android:id="@+id/divider3"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/view_divider_height"
+        android:layout_height="1dp"
         android:background="?android:attr/listDivider" />
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/card_width_board"
@@ -33,13 +31,16 @@
         app:cardCornerRadius="@dimen/card_radius_board">
 
         <TextView
-            android:id="@+id/boardGujTV"
+            android:id="@+id/youtube_video"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:drawableRight="@drawable/ic_action_arrow"
             android:gravity="center"
+            android:paddingRight="20dp"
+            android:text="Watch video"
             android:textColor="@color/colorUniversalforApp"
-            android:text="@string/boardTV_Gujarati"
             android:textSize="@dimen/textView_Size" />
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -50,12 +51,12 @@
         app:cardCornerRadius="@dimen/card_radius_board">
 
         <TextView
-            android:id="@+id/boardEngTV"
+            android:id="@+id/textbook_pdf"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textColor="@color/colorUniversalforApp"
-            android:text="@string/boardTV_English"
+            android:text="Download PDF"
             android:textSize="@dimen/textView_Size" />
     </androidx.cardview.widget.CardView>
 

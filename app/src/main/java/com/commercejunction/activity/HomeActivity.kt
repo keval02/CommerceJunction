@@ -1,12 +1,14 @@
 package com.commercejunction.activity
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -14,7 +16,9 @@ import com.commercejunction.R
 import com.commercejunction.R.layout
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_std1.*
 import kotlinx.android.synthetic.main.appbar.*
+import kotlin.system.exitProcess
 
 open class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -22,6 +26,11 @@ open class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_home)
+
+        subject1.setOnClickListener() {
+            val intent = Intent(this,Subject1Activity::class.java)
+            startActivity(intent)
+        }
 
         nav_view.bringToFront()
         setSupportActionBar(StdToolbar)
@@ -58,6 +67,28 @@ open class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
         } else if (id == R.id.logout) {
+
+            val logout = AlertDialog.Builder(this)
+            logout.setTitle("Logout")
+            //set message for alert dialog
+            logout.setMessage("Are you sure?")
+            //logout.setIcon(android.R.drawable.ic_dialog_alert)
+
+            //performing positive action
+            logout.setPositiveButton("Yes",DialogInterface.OnClickListener{dialog, which ->
+                val intent = Intent(this,LoginActivity::class.java)
+                startActivity(intent)
+            })
+            //performing negative action
+            logout.setNegativeButton("No",DialogInterface.OnClickListener{dialog, which ->
+                dialog.dismiss()
+            })
+
+            // Create the AlertDialog
+            val alertDialog: AlertDialog = logout.create()
+            // Set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
 
         }
         drawer_layout.closeDrawer(GravityCompat.START)
