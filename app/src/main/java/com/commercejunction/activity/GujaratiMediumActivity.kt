@@ -11,6 +11,10 @@ class GujaratiMediumActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gujarati_medium)
 
+        std_back.setOnClickListener {
+            val  intent = Intent(this,BoardActivity::class.java)
+            startActivity(intent)
+        }
         std1.setOnClickListener(){
             val  intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
