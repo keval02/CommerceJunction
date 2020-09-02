@@ -1,57 +1,38 @@
 package com.commercejunction.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import com.commercejunction.EBooksList
+import androidx.appcompat.app.AppCompatActivity
 import com.commercejunction.R
-import com.commercejunction.VideosList
+import com.commercejunction.adapter.Viewpager
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_subject1.*
 
 class Subject1Activity : AppCompatActivity() {
 
-    var frameLayout: FrameLayout? = null
-    var fragment: Fragment? = null
-    var fragmentManager: FragmentManager? = null
-    var fragmentTransaction: FragmentTransaction? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
-                super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_subject1)
 
-        fragment = VideosList()
-        fragmentManager = supportFragmentManager
-        fragmentTransaction = fragmentManager!!.beginTransaction()
-        fragmentTransaction!!.replace(R.id.frameLayout, fragment!!)
-        fragmentTransaction!!.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-        fragmentTransaction!!.commit()
+        val adapter = Viewpager(this.supportFragmentManager, this)
 
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                // creating cases for fragment
-                when (tab.position) {
-                    0 -> fragment = VideosList()
-                    1 -> fragment = EBooksList()
-                }
-                val fm = supportFragmentManager
-                val ft = fm.beginTransaction()
-                ft.replace(R.id.frameLayout, fragment!!)
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                ft.commit()
+        //Adding adapter to pager
+        viewPager.adapter = adapter
+        tabLayout.setupWithViewPager(viewPager)
+        tabLayout.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabReselected(p0: TabLayout.Tab?) {
+                TODO("Not yet implemented")
             }
 
             override fun onTabUnselected(p0: TabLayout.Tab?) {
                 TODO("Not yet implemented")
             }
 
-            override fun onTabReselected(p0: TabLayout.Tab?) {
-                TODO("Not yet implemented")
+            override fun onTabSelected(p0: TabLayout.Tab) {
+                viewPager.currentItem = p0.position
             }
-        })
 
-        }
+        })
     }
+}
 

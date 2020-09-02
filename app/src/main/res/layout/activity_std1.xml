@@ -164,7 +164,6 @@
                     android:layout_width="@dimen/subject_grid_button_width"
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/grey_bg"
-                    android:drawableLeft="@drawable/ic_biology"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingBottom="@dimen/padding_bottom"
