@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:orientation="vertical">
 
     <Toolbar
         android:id="@+id/profile_toolbar"
@@ -30,15 +29,15 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/user_profileIV"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             app:civ_border_color="#000000"
             app:civ_border_width="1dp"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/student_profile"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -67,7 +66,7 @@
         android:gravity="center"
         android:textColor="@color/colorPrimary"
         android:text="@string/head"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="normal|bold" />
 
     <EditText
@@ -76,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:layout_margin="10dp"
         android:inputType="textPersonName"
         android:text="@string/username" />
 
@@ -83,6 +83,7 @@
         android:id="@+id/userEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:text="@string/useremail"
@@ -94,6 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:layout_margin="10dp"
         android:text="@string/usercontact"
         android:inputType="phone" />
     <androidx.cardview.widget.CardView
