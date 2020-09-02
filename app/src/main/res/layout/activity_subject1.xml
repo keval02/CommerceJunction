@@ -61,30 +61,14 @@
         app:tabSelectedTextColor="@color/colorPrimaryDark"
         app:tabTextColor="@color/colorPrimary">
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/videos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Videos"/>
+        
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/ebooks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="E-Books" />
 
     </com.google.android.material.tabs.TabLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginLeft="5dp"
-        android:id="@+id/frameLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
-    </FrameLayout>
-
+    
 </LinearLayout>
