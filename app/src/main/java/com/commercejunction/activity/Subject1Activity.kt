@@ -1,6 +1,7 @@
 package com.commercejunction.activity
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.commercejunction.R
 import com.commercejunction.adapter.Viewpager
@@ -13,26 +14,30 @@ class Subject1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_subject1)
+        try{
+            val adapter = Viewpager(this.supportFragmentManager, this)
 
-        val adapter = Viewpager(this.supportFragmentManager, this)
+            //Adding adapter to pager
+            viewPager.adapter = adapter
+            tabLayout.setupWithViewPager(viewPager)
+            tabLayout.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+                override fun onTabReselected(p0: TabLayout.Tab?) {
+                    TODO("Not yet implemented")
+                }
 
-        //Adding adapter to pager
-        viewPager.adapter = adapter
-        tabLayout.setupWithViewPager(viewPager)
-        tabLayout.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabReselected(p0: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
+                override fun onTabUnselected(p0: TabLayout.Tab?) {
+                    TODO("Not yet implemented")
+                }
 
-            override fun onTabUnselected(p0: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
+                override fun onTabSelected(p0: TabLayout.Tab) {
+                    viewPager.currentItem = p0.position
+                }
 
-            override fun onTabSelected(p0: TabLayout.Tab) {
-                viewPager.currentItem = p0.position
-            }
+            })
+        }catch (e : Exception){
+            Log.e("error" , e.message)
+        }
 
-        })
     }
 }
 

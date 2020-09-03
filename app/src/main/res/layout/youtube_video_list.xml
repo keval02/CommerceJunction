@@ -7,9 +7,9 @@
     android:layout_gravity="center"
     tools:context="com.commercejunction.VideosList">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+<!--    <ScrollView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
 
      <GridLayout
          android:layout_width="match_parent"
@@ -248,5 +248,5 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="14dp" />
         </GridLayout>
-    </ScrollView>
+<!--    </ScrollView>-->
 </FrameLayout>

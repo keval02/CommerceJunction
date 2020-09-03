@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/bg_study_app"
     android:orientation="vertical">
 
     <ListView
         android:layout_width="349dp"
-        android:layout_height="622dp">
+        android:layout_height="622dp"
+        android:id="@+id/videoList">
 
     </ListView>
 
