@@ -14,6 +14,6 @@ class EBooksList: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.youtube_video_list, container, false)
+        return inflater.inflate(R.layout.ebooks_list, container, false)
     }
 }

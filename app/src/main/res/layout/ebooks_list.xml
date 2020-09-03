@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:tool="http://schemas.android.com/tools"
+    android:paddingLeft="6dp"
     android:orientation="vertical"
     android:layout_gravity="center"
     tool:context="com.commercejunction.EBooksList">
 
-<!--    <ScrollView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content">-->
-
     <GridLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:id="@+id/imageViewFlag"
-            android:layout_width="164dp"
-            android:layout_height="105dp"
+            android:layout_width="95dp"
+            android:layout_height="91dp"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:layout_column="0"
             android:scaleType="fitXY"
-            android:src="@drawable/video1" />
+            android:src="@drawable/pdf" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,18 +59,18 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="120dp">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="164dp"
-            android:layout_height="105dp"
+            android:layout_width="95dp"
+            android:layout_height="91dp"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:layout_column="0"
             android:scaleType="fitXY"
-            android:src="@drawable/video2" />
+            android:src="@drawable/pdf" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,16 +99,16 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp">
+        android:layout_marginBottom="20dp">
 
         <ImageView
-            android:layout_width="164dp"
-            android:layout_height="105dp"
+            android:layout_width="95dp"
+            android:layout_height="91dp"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:layout_column="0"
             android:scaleType="fitXY"
-            android:src="@drawable/video1" />
+            android:src="@drawable/pdf" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,17 +137,17 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="360dp">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
 
         <ImageView
-            android:layout_width="164dp"
-            android:layout_height="105dp"
+            android:layout_width="95dp"
+            android:layout_height="91dp"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:layout_column="0"
             android:scaleType="fitXY"
-            android:src="@drawable/video2" />
+            android:src="@drawable/pdf" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -150,7 +156,7 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
-            android:text="Chapter 2"
+            android:text="Chapter 4"
             android:textColor="@color/colorPrimary"
             android:textSize="20dp" />
 
@@ -168,5 +174,5 @@
             android:textSize="14dp" />
     </GridLayout>
 
-<!--    </ScrollView>-->
-</FrameLayout>
+</LinearLayout>
+</ScrollView>

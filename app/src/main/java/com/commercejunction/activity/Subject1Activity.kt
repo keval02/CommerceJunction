@@ -8,6 +8,7 @@ import com.commercejunction.adapter.Viewpager
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_subject1.*
 
+@Suppress("DEPRECATION")
 class Subject1Activity : AppCompatActivity() {
 
 
@@ -22,11 +23,9 @@ class Subject1Activity : AppCompatActivity() {
             tabLayout.setupWithViewPager(viewPager)
             tabLayout.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
                 override fun onTabReselected(p0: TabLayout.Tab?) {
-                    TODO("Not yet implemented")
                 }
 
                 override fun onTabUnselected(p0: TabLayout.Tab?) {
-                    TODO("Not yet implemented")
                 }
 
                 override fun onTabSelected(p0: TabLayout.Tab) {

@@ -11,7 +11,7 @@ import com.commercejunction.VideosList
 class Viewpager(fm: FragmentManager, context: Context) :
     FragmentStatePagerAdapter(fm) {
     val PAGE_COUNT = 2
-    private val tabTitles = arrayOf("Local", "Online")
+    private val tabTitles = arrayOf("Videos", "E-Books")
     private val context: Context
     override fun getItem(position: Int): Fragment {
         return when (position) {
