@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_new1"
+    android:background="#000000"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:orientation="vertical"
-    android:layout_gravity="bottom"
-    android:gravity="bottom"
     tools:context=".activity.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/tcj"/>
 </LinearLayout>
