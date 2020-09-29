@@ -9,7 +9,7 @@ public class ApiURLs {
 
     public static final String LOGIN_URL = "/Student.svc/json/Login";
 
-    public static final String MEDIUM_LIST_URL = "/Lists.svc/json/MediumList";
+    public static final String MEDIUM_LIST_URL = "/Lists.svc/json/MediumList/";
 
     public static final String STANDARD_LIST_URL = "/Lists.svc/json/StandardList/{MEDIUMID}";
 
@@ -18,5 +18,9 @@ public class ApiURLs {
     public static final String CHAPTERS_LIST_URL = "/Lists.svc/json/ChapterList/{SUBJECTID}";
 
     public static final String VIDEO_LIST_URL = "/Lists.svc/json/VideoList/{CHAPTERID}";
+
+    public static final String PDF_LIST_URL = "/Lists.svc/json/VideoList/{CHAPTERID}";
+
+
 
 }

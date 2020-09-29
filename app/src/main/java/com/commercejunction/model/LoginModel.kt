@@ -1,7 +1,7 @@
 package com.commercejunction.model
 
-data class BoardModel(
+data class LoginModel(
     val ResponseCode: Int,
-    val ResponseData: BoardResponseData,
+    val ResponseData: LoginResponseData,
     val ResponseMsg: String
 )

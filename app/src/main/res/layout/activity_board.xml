@@ -9,19 +9,20 @@
     tools:context=".activity.BoardActivity">
 
     <Toolbar
+        android:id="@+id/toolbar_board"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:id="@+id/toolbar_board"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
 
 
         <ImageView
+            android:id="@+id/board_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            android:id="@+id/board_back"/>
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
         <TextView
             android:id="@+id/boardTV2"
             android:layout_width="match_parent"
@@ -31,7 +32,7 @@
             android:text="@string/board_title"
             android:textColor="#ffffff"
             android:textSize="@dimen/textView_Size"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
 
     </Toolbar>
@@ -46,80 +47,83 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
         android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="What is your school board?"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:text="What is your school board?"/>
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:gravity="center">
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="143dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp">
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="164dp"
-            android:layout_height="89dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="@dimen/card_margin_top_board"
-            app:cardCornerRadius="@dimen/card_radius_board">
-
-            <TextView
-                android:id="@+id/boardGujTV"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/boardTV_Gujarati"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="164dp"
-            android:layout_height="89dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/card_margin_top_board"
-            app:cardCornerRadius="@dimen/card_radius_board">
-
-            <TextView
-                android:id="@+id/boardEngTV"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/boardTV_English"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp" />
-        </androidx.cardview.widget.CardView>
-    </GridLayout>
-
-        <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/login_button_width"
-        android:layout_height="@dimen/card_height"
-        android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/card_margin_bottom"
-        app:cardBackgroundColor="@color/cardBackgrouund"
-        app:cardCornerRadius="@dimen/card_radius"
-        app:cardElevation="@dimen/card_elevation"
-            android:layout_marginTop="300dp">
-
-        <Button
-            android:id="@+id/board_Select"
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="143dp"
             android:layout_gravity="center"
-            android:background="@color/colorPrimaryDark"
-            android:text="Next"
-            android:textColor="@color/buttonText"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+            android:layout_marginBottom="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="164dp"
+                android:id="@+id/gujCV"
+                android:layout_height="89dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="@dimen/card_margin_top_board"
+                app:cardCornerRadius="@dimen/card_radius_board">
+
+                <TextView
+                    android:id="@+id/boardGujTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/boardTV_Gujarati"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="164dp"
+                android:layout_height="89dp"
+                android:id="@+id/engMed"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/card_margin_top_board"
+                app:cardCornerRadius="@dimen/card_radius_board">
+
+                <TextView
+                    android:id="@+id/boardEngTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/boardTV_English"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/login_button_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="300dp"
+            android:layout_marginBottom="@dimen/card_margin_bottom"
+            app:cardBackgroundColor="@color/cardBackgrouund"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:cardElevation="@dimen/card_elevation">
+
+            <Button
+                android:id="@+id/board_Select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:text="Next"
+                android:textColor="@color/buttonText"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>

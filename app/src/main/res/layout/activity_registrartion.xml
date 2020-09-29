@@ -41,6 +41,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/edittextBackground"
                 android:hint="@string/registration_name_editText"
+                android:imeOptions="actionNext"
                 android:inputType="textPersonName"
                 android:paddingStart="@dimen/edittext_padding" />
 
@@ -59,6 +60,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/edittextBackground"
                 android:hint="@string/registration_email_editText"
+                android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
                 android:paddingStart="@dimen/edittext_padding" />
         </androidx.cardview.widget.CardView>
@@ -77,6 +79,7 @@
                 android:background="@color/edittextBackground"
                 android:hint="@string/registration_contact_editText"
                 android:inputType="phone"
+                android:imeOptions="actionNext"
                 android:paddingStart="@dimen/edittext_padding" />
         </androidx.cardview.widget.CardView>
 
@@ -93,6 +96,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/edittextBackground"
                 android:hint="@string/registration_password_editText"
+                android:imeOptions="actionNext"
                 android:inputType="textPassword"
                 android:paddingStart="@dimen/edittext_padding" />
         </androidx.cardview.widget.CardView>
@@ -110,6 +114,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/edittextBackground"
                 android:hint="@string/registration_confirmPassword_editText"
+                android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:paddingStart="@dimen/edittext_padding" />
         </androidx.cardview.widget.CardView>

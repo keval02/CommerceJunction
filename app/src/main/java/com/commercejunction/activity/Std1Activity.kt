@@ -1,6 +1,7 @@
 
 package com.commercejunction.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -20,4 +21,5 @@ class Std1Activity : AppCompatActivity() {
         setContentView(R.layout.activity_std1)
 
     }
+
 }

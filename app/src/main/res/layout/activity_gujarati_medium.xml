@@ -41,25 +41,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <!--            <TextView-->
-        <!--                android:id="@+id/primaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/layout_height"-->
-        <!--                android:layout_marginTop="@dimen/margin_top_std"-->
-        <!--                android:gravity="center"-->
-        <!--                android:text="@string/headTV_Primary"-->
-        <!--                android:textColor="@color/colorPrimary"-->
-        <!--                android:textSize="@dimen/text_size"-->
-        <!--                android:textStyle="bold" />-->
-
-        <!--            <View-->
-        <!--                android:id="@+id/afterPrimaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/view_divider_height"-->
-        <!--                android:layout_marginTop="@dimen/view_divider_margin_top"-->
-        <!--                android:background="?android:attr/listDivider" />-->
-
-        <androidx.gridlayout.widget.GridLayout
+        <!--<androidx.gridlayout.widget.GridLayout
             android:layout_width="376dp"
             android:layout_height="346dp"
             android:layout_gravity="center"
@@ -239,211 +221,31 @@
                     app:layout_row="3" />
             </androidx.cardview.widget.CardView>
 
-        </androidx.gridlayout.widget.GridLayout>
+        </androidx.gridlayout.widget.GridLayout>-->
 
-        <!--            <View-->
-        <!--                android:id="@+id/beforeSecondaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/view_divider_height"-->
-        <!--                android:layout_marginTop="@dimen/view_divider_margin_top"-->
-        <!--                android:background="?android:attr/listDivider" />-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
 
-        <!--            <TextView-->
-        <!--                android:id="@+id/secondaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/layout_height"-->
-        <!--                android:layout_marginTop="@dimen/margin_top_std"-->
-        <!--                android:gravity="center"-->
-        <!--                android:text="@string/headTV_Secondary"-->
-        <!--                android:textSize="@dimen/text_size"-->
-        <!--                android:textStyle="bold" />-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_location"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
 
-        <!--            <View-->
-        <!--                android:id="@+id/afterSecondaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/view_divider_height"-->
-        <!--                android:layout_marginTop="@dimen/view_divider_margin_top"-->
-        <!--                android:background="?android:attr/listDivider" />-->
-
-        <!--            <androidx.gridlayout.widget.GridLayout-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/grid_secondary_height"-->
-        <!--                android:layout_gravity="center"-->
-        <!--                android:layout_marginTop="@dimen/grid_margin_top"-->
-        <!--                android:layout_marginBottom="@dimen/grid_margin_bottom"-->
-        <!--                app:columnCount="2">-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std10"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_10"-->
-        <!--                    app:layout_column="1"-->
-        <!--                    app:layout_row="0" />-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std9"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_9"-->
-        <!--                    app:layout_column="0"-->
-        <!--                    app:layout_row="0" />-->
-
-        <!--            </androidx.gridlayout.widget.GridLayout>-->
-
-        <!--            <View-->
-        <!--                android:id="@+id/beforeHigherSecondaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/view_divider_height"-->
-        <!--                android:layout_marginTop="@dimen/grid_margin_top"-->
-        <!--                android:background="?android:attr/listDivider" />-->
-
-        <!--            <TextView-->
-        <!--                android:id="@+id/higherSecondaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/layout_height"-->
-        <!--                android:layout_marginTop="@dimen/margin_top_std"-->
-        <!--                android:gravity="center"-->
-        <!--                android:text="@string/headTV_Higher_Secondary"-->
-        <!--                android:textSize="@dimen/text_size"-->
-        <!--                android:textStyle="bold" />-->
-
-        <!--            <View-->
-        <!--                android:id="@+id/afterHigherSecondaryTV"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/view_divider_height"-->
-        <!--                android:layout_marginTop="@dimen/view_divider_margin_top"-->
-        <!--                android:background="?android:attr/listDivider" />-->
-
-        <!--            <androidx.gridlayout.widget.GridLayout-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="@dimen/grid_higher_height"-->
-        <!--                android:layout_gravity="center"-->
-        <!--                android:layout_marginTop="@dimen/grid_margin_top"-->
-        <!--                android:layout_marginBottom="@dimen/grid_margin_bottom"-->
-        <!--                app:columnCount="2">-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std12Com"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_12_comm"-->
-        <!--                    app:layout_column="1"-->
-        <!--                    app:layout_row="0" />-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std11Arts"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_11_arts"-->
-        <!--                    app:layout_column="0"-->
-        <!--                    app:layout_row="1" />-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std12Arts"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_12_arts"-->
-        <!--                    app:layout_column="1"-->
-        <!--                    app:layout_row="1" />-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std11Com"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_11_comm"-->
-        <!--                    app:layout_column="0"-->
-        <!--                    app:layout_row="0" />-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std11Sci"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_11_sci"-->
-        <!--                    app:layout_column="0"-->
-        <!--                    app:layout_row="2" />-->
-
-        <!--                <Button-->
-        <!--                    android:id="@+id/std12Sci"-->
-        <!--                    android:layout_width="@dimen/grid_button_width"-->
-        <!--                    android:layout_height="@dimen/grid_button_height"-->
-        <!--                    android:layout_marginStart="@dimen/margin_start"-->
-        <!--                    android:layout_marginTop="@dimen/margin_top"-->
-        <!--                    android:layout_marginEnd="@dimen/margin_end"-->
-        <!--                    android:background="@drawable/grid_button_radius"-->
-        <!--                    android:drawableTop="@drawable/bag_icon"-->
-        <!--                    android:paddingLeft="@dimen/padding_left"-->
-        <!--                    android:paddingTop="@dimen/padding_top"-->
-        <!--                    android:paddingRight="@dimen/padding_right"-->
-        <!--                    android:paddingBottom="@dimen/padding_bottom"-->
-        <!--                    android:text="@string/class_12_sci"-->
-        <!--                    app:layout_column="1"-->
-        <!--                    app:layout_row="2" />-->
-
-        <!--            </androidx.gridlayout.widget.GridLayout>-->
+            <TextView
+                android:id="@+id/txt_no_data_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/no_standard_found"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp" />
+        </FrameLayout>
 
     </LinearLayout>
 </LinearLayout>

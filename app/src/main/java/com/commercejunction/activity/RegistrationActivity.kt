@@ -1,21 +1,19 @@
 package com.commercejunction.activity
 
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.Window
-import android.widget.TextView
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.commercejunction.R
 import com.commercejunction.apis.AdminAPI
 import com.commercejunction.apis.ServiceGenerator
 import com.commercejunction.constants.Global.displayToastMessage
 import com.commercejunction.constants.Global.showProgressDialog
+import com.commercejunction.model.BaseModel
 import com.google.gson.JsonObject
 import kotlinx.android.synthetic.main.activity_registrartion.*
 import okhttp3.ResponseBody
@@ -26,7 +24,7 @@ import retrofit2.Response
 class RegistrationActivity : AppCompatActivity() {
 
     var adminAPI: AdminAPI? = null
-    lateinit var progressDialog :Dialog
+    lateinit var progressDialog: Dialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrartion)
@@ -46,7 +44,7 @@ class RegistrationActivity : AppCompatActivity() {
 
             if (userName.isEmpty()) {
                 displayToastMessage("Please enter user name!", applicationContext)
-            } else if (userEmail.isNotEmpty() && !Patterns.EMAIL_ADDRESS.matcher(userEmail)
+            } else if (userEmail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(userEmail)
                     .matches()
             ) {
                 displayToastMessage("Please enter valid email address!", applicationContext)
@@ -77,7 +75,7 @@ class RegistrationActivity : AppCompatActivity() {
         mobileNumber: String,
         password: String
     ) {
-        showProgressDialog(progressDialog,true,this)
+        showProgressDialog(progressDialog, true, this)
         val jsonRequest = JsonObject();
 
         jsonRequest.addProperty("EmailId", userEmail)
@@ -85,25 +83,27 @@ class RegistrationActivity : AppCompatActivity() {
         jsonRequest.addProperty("Name", userName)
         jsonRequest.addProperty("Password", password)
 
-        val response: Call<ResponseBody>? = adminAPI?.RegisterUserMobileNumber(jsonRequest)
-        response?.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                Log.e("Response",""+response.body())
-                showProgressDialog(progressDialog,false,applicationContext)
-                if (response.code() == 200) {
+        val response: Call<BaseModel>? = adminAPI?.RegisterUserMobileNumber(jsonRequest)
+        response?.enqueue(object : Callback<BaseModel> {
+            override fun onResponse(call: Call<BaseModel>, response: Response<BaseModel>) {
+                showProgressDialog(progressDialog, false, applicationContext)
+                val data = response.body()
+                if (data?.ResponseCode == 1) {
                     val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
-                    displayToastMessage("Something went wrong!", applicationContext)
+                    displayToastMessage(data?.ResponseMsg, applicationContext)
                 }
             }
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                Log.e("Failure",""+t.message)
-                showProgressDialog(progressDialog,false,applicationContext)
+
+            override fun onFailure(call: Call<BaseModel>, t: Throwable) {
+                Log.e("Failure", "" + t.message)
+                showProgressDialog(progressDialog, false, applicationContext)
                 displayToastMessage("Something went wrong!", applicationContext)
             }
         })
     }
+
 }
 

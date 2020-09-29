@@ -1,33 +1,47 @@
 package com.commercejunction.apis;
 
+import com.commercejunction.model.BaseModel;
+import com.commercejunction.model.BoardModel;
+import com.commercejunction.model.CheapterModel;
+import com.commercejunction.model.LoginModel;
+import com.commercejunction.model.StandardModel;
+import com.commercejunction.model.SubjectModel;
+import com.commercejunction.model.VideoModel;
 import com.google.gson.JsonObject;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 public interface AdminAPI {
 
     @POST(ApiURLs.REGISTRATION_URL)
-    Call<ResponseBody> RegisterUserMobileNumber(@Body JsonObject jsonRequest);
+    Call<BaseModel> RegisterUserMobileNumber(@Body JsonObject jsonRequest);
 
     @POST(ApiURLs.LOGIN_URL)
-    Call<ResponseBody> LoginUserName(@Body JsonObject jsonRequest);
+    Call<LoginModel> LoginUserName(@Body JsonObject jsonRequest);
 
-    @POST(ApiURLs.MEDIUM_LIST_URL)
-    Call<ResponseBody> MediumList(@Body JsonObject jsonRequest);
+    @GET(ApiURLs.MEDIUM_LIST_URL)
+    Call<BoardModel> MediumList();
 
-    @POST(ApiURLs.STANDARD_LIST_URL)
-    Call<ResponseBody> StandardList(@Body JsonObject jsonRequest);
+    @GET(ApiURLs.STANDARD_LIST_URL)
+    Call<StandardModel> StandardList(@Path("MEDIUMID") int mediumId);
 
-    @POST(ApiURLs.SUBJECT_LIST_URL)
-    Call<ResponseBody> SubjectList(@Body JsonObject jsonRequest);
+    @GET(ApiURLs.SUBJECT_LIST_URL)
+    Call<SubjectModel> SubjectList(@Path("STANDARDID") int standardId);
 
-    @POST(ApiURLs.CHAPTERS_LIST_URL)
-    Call<ResponseBody> ChaptersList(@Body JsonObject jsonRequest);
+    @GET(ApiURLs.CHAPTERS_LIST_URL)
+    Call<CheapterModel> ChaptersList(@Path("SUBJECTID") int standardId);
 
-    @POST(ApiURLs.VIDEO_LIST_URL)
-    Call<ResponseBody> VideoList(@Body JsonObject jsonRequest);
+    @GET(ApiURLs.VIDEO_LIST_URL)
+    Call<VideoModel> VideoList(@Path("CHAPTERID") int standardId);
+
+    @GET(ApiURLs.PDF_LIST_URL)
+    Call<ResponseBody> PDFList(@Path("CHAPTERID") int standardId);
 }

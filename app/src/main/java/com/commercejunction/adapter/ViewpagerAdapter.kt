@@ -8,21 +8,22 @@ import com.commercejunction.EBooksList
 import com.commercejunction.VideosList
 
 
-class Viewpager(fm: FragmentManager, context: Context) :
+class Viewpager(fm: FragmentManager, context: Context, subjectId : Int) :
     FragmentStatePagerAdapter(fm) {
     val PAGE_COUNT = 2
     private val tabTitles = arrayOf("Videos", "E-Books")
     private val context: Context
+    var subject = subjectId
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
-                VideosList()
+                VideosList(subject)
             }
             1 -> {
-                EBooksList()
+                EBooksList(subject)
             }
             else -> {
-                VideosList()
+                VideosList(subject)
             }
         }
     }

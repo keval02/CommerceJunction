@@ -1,5 +1,6 @@
 package com.commercejunction.activity
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -10,13 +11,18 @@ import kotlinx.android.synthetic.main.activity_subject1.*
 
 @Suppress("DEPRECATION")
 class Subject1Activity : AppCompatActivity() {
-
-
+    var subjectId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_subject1)
         try{
-            val adapter = Viewpager(this.supportFragmentManager, this)
+            subjectId = intent.getIntExtra("subjectId" , 0);
+        }catch (e: Exception){
+
+        }
+
+        try{
+            val adapter = Viewpager(this.supportFragmentManager, this, subjectId)
 
             //Adding adapter to pager
             viewPager.adapter = adapter
@@ -36,7 +42,7 @@ class Subject1Activity : AppCompatActivity() {
         }catch (e : Exception){
             Log.e("error" , e.message)
         }
-
     }
+
 }
 

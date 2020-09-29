@@ -68,4 +68,10 @@
     <string name="username">Username</string>
     <string name="useremail">User Email-ID</string>
     <string name="usercontact">User Contact</string>
+
+    <string name="no_standard_found">No Standards found!</string>
+    <string name="no_videos_found">No Videos found!</string>
+    <string name="no_material_found">No Material found!</string>
+
+
 </resources>

@@ -2,7 +2,7 @@
 
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -16,7 +16,17 @@
     android:paddingLeft="6dp"
     tools:context="com.commercejunction.VideosList">
 
-     <GridLayout
+    <TextView
+        android:id="@+id/txt_no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/no_videos_found"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp" />
+
+     <!--<GridLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content">
 
@@ -252,6 +262,9 @@
                 android:text="40 mins"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14dp" />
-        </GridLayout>
+        </GridLayout>-->
+
+
+
 </FrameLayout>
 </ScrollView>

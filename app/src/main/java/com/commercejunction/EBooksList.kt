@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.commercejunction.R
 
-class EBooksList: Fragment() {
+class EBooksList(subjectId : Int): Fragment() {
 
     override  fun onCreateView(
         inflater: LayoutInflater,

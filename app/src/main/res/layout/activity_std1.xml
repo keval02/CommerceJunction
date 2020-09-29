@@ -8,112 +8,114 @@
     android:orientation="vertical"
     tools:context=".activity.Std1Activity">
 
-           <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:gravity="left"
-               android:layout_marginLeft="40dp"
-               android:layout_marginBottom="15dp"
-            android:text="Hi,what would you learn today?"
-               android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="left"
+        android:text="Hi,what would you learn today?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
 
-            <androidx.gridlayout.widget.GridLayout
+        <!--<androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:columnCount="2">
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:columnCount="2">
+                app:cardCornerRadius="8dp">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp">
                 <TextView
                     android:id="@+id/subject1"
                     android:layout_width="@dimen/subject_grid_button_width"
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/green_bg"
                     android:drawableLeft="@drawable/ic_calculator"
+                    android:gravity="center"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingRight="@dimen/padding_right"
                     android:paddingBottom="@dimen/padding_bottom"
                     android:text="Subject 1"
-                    android:gravity="center"
                     android:textColor="#ffffff"
                     android:textSize="18sp"
                     app:layout_column="0"
                     app:layout_row="0" />
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    app:layout_gravity="center"
-                    app:cardCornerRadius="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_gravity="center">
 
-                    <TextView
-                        android:id="@+id/subject2"
-                        android:layout_width="150dp"
-                        android:layout_height="75dp"
-                        android:background="@drawable/red_bg"
-                        android:drawableLeft="@drawable/ic_physics"
-                        android:gravity="center"
-                        android:paddingLeft="@dimen/padding_left"
-                        android:paddingTop="@dimen/padding_top"
-                        android:paddingRight="@dimen/padding_right"
-                        android:paddingBottom="@dimen/padding_bottom"
-                        android:text="Subject 2"
-                        android:textColor="#ffffff"
-                        android:textSize="18sp"
-                        app:layout_column="1"
-                        app:layout_row="0" />
+                <TextView
+                    android:id="@+id/subject2"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/red_bg"
+                    android:drawableLeft="@drawable/ic_physics"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_left"
+                    android:paddingTop="@dimen/padding_top"
+                    android:paddingRight="@dimen/padding_right"
+                    android:paddingBottom="@dimen/padding_bottom"
+                    android:text="Subject 2"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:layout_column="1"
+                    app:layout_row="0" />
 
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
-                    app:layout_gravity="center"
-                    app:cardCornerRadius="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_gravity="center">
+
                 <TextView
                     android:id="@+id/subject3"
                     android:layout_width="@dimen/subject_grid_button_width"
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/yellow_bg"
                     android:drawableLeft="@drawable/ic_chemistry"
+                    android:gravity="center"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingRight="@dimen/padding_right"
                     android:paddingBottom="@dimen/padding_bottom"
                     android:text="Subject 3"
-                    android:gravity="center"
                     android:textColor="#ffffff"
                     android:textSize="18sp"
                     app:layout_column="0"
                     app:layout_row="1" />
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    app:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_gravity="center">
 
                 <TextView
                     android:id="@+id/subject4"
@@ -121,103 +123,132 @@
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/blue_bg"
                     android:drawableLeft="@drawable/ic_chemistry"
+                    android:gravity="center"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingBottom="@dimen/padding_bottom"
-                    android:gravity="center"
+                    android:text="Subject 4"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
-                    android:text="Subject 4" />
-                </androidx.cardview.widget.CardView>
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    app:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_gravity="center">
+
                 <TextView
                     android:id="@+id/subject5"
                     android:layout_width="@dimen/subject_grid_button_width"
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/purple_bg"
                     android:drawableLeft="@drawable/ic_computer"
+                    android:gravity="center"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingRight="@dimen/padding_right"
                     android:paddingBottom="@dimen/padding_bottom"
                     android:text="Subject 5"
-                    android:gravity="center"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"/>
-                </androidx.cardview.widget.CardView>
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    app:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_gravity="center">
+
                 <TextView
                     android:id="@+id/subject6"
                     android:layout_width="@dimen/subject_grid_button_width"
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/grey_bg"
+                    android:gravity="center"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingBottom="@dimen/padding_bottom"
-                    android:gravity="center"
+                    android:text="Subject 6"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
-                    android:text="Subject 6" />
-                </androidx.cardview.widget.CardView>
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
-                    app:layout_gravity="center"
-                    app:cardCornerRadius="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_gravity="center">
+
                 <TextView
                     android:id="@+id/subject7"
                     android:layout_width="@dimen/subject_grid_button_width"
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/orange_bg"
                     android:drawableLeft="@drawable/ic_physics"
+                    android:gravity="center"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingRight="@dimen/padding_right"
                     android:paddingBottom="@dimen/padding_bottom"
-                    android:gravity="center"
+                    android:text="Subject 7"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
-                    android:text="Subject 7" />
-                </androidx.cardview.widget.CardView>
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    app:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_gravity="center">
+
                 <TextView
                     android:id="@+id/share"
                     android:layout_width="@dimen/subject_grid_button_width"
                     android:layout_height="@dimen/subject_grid_button_height"
                     android:background="@drawable/blue_bg"
                     android:drawableLeft="@drawable/ic_baseline_share_24"
+                    android:gravity="center"
                     android:paddingLeft="@dimen/padding_left"
                     android:paddingTop="@dimen/padding_top"
                     android:paddingBottom="@dimen/padding_bottom"
-                    android:gravity="center"
+                    android:text="Share"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
-                    android:text="Share" />
+                    android:textSize="18sp" />
 
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            </androidx.gridlayout.widget.GridLayout>
-        </LinearLayout>
+        </androidx.gridlayout.widget.GridLayout>-->
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_location"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/txt_no_data_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/no_standard_found"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp" />
+        </FrameLayout>
+    </LinearLayout>
 </LinearLayout>
