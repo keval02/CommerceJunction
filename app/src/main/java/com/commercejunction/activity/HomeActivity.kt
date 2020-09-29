@@ -153,8 +153,8 @@ open class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                     standardListData?.ResponseData?.Data?.let { standardList.addAll(it) }
                     standardListAdapter = object : SubjectListAdapter(this@HomeActivity , standardList){
                         override fun onStandardSelection(id: Int) {
-                            val intent = Intent(this@HomeActivity,Subject1Activity::class.java)
-                            intent.putExtra("subjectId" , id)
+                            val intent = Intent(this@HomeActivity,ChapterListActivity::class.java)
+                                intent.putExtra("`subjectId`" , id)
                             startActivity(intent)
                         }
                     }

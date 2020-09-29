@@ -69,6 +69,7 @@ class GujaratiMediumActivity : AppCompatActivity() {
                             val  intent = Intent(this@GujaratiMediumActivity,HomeActivity::class.java)
                             preferenceHelper.setInt("standardSelection" , id)
                             preferenceHelper.setString("standardName" , standardName)
+
                             startActivity(intent)
                             finish()
                         }

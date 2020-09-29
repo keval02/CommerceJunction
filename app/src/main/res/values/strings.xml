@@ -72,6 +72,8 @@
     <string name="no_standard_found">No Standards found!</string>
     <string name="no_videos_found">No Videos found!</string>
     <string name="no_material_found">No Material found!</string>
-
+    <!-- Chapters list -->
+    <string name="headTV_Chapters">Chapter</string>
+    <string name="chapter_1">Chapter 1</string>
 
 </resources>
