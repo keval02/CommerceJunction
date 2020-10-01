@@ -21,6 +21,10 @@ public class ApiURLs {
 
     public static final String PDF_LIST_URL = "/Lists.svc/json/VideoList/{CHAPTERID}";
 
+    public static final String CHANGE_PASSWORD_URL = "/Student.svc/json/ChangePassword/{STUDENTID}";
+
+    public static final String EDIT_PROFILE_URL = "/Student.svc/json/EditProfile/{STUDENTID}";
+
 
 
 }

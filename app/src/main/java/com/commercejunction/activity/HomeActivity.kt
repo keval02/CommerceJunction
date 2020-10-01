@@ -91,7 +91,10 @@ open class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         nav_view.setNavigationItemSelectedListener(this)
         mDrawerToggle.syncState()
 
-
+        editStd.setOnClickListener {
+            val intent = Intent(applicationContext, GujaratiMediumActivity::class.java)
+            startActivity(intent)
+        }
         getAllSubjects(standardId)
     }
 

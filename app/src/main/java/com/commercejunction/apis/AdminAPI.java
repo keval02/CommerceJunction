@@ -4,11 +4,13 @@ import com.commercejunction.model.BaseModel;
 import com.commercejunction.model.BoardModel;
 import com.commercejunction.model.CheapterModel;
 import com.commercejunction.model.LoginModel;
+import com.commercejunction.model.ProfileModel;
 import com.commercejunction.model.StandardModel;
 import com.commercejunction.model.SubjectModel;
 import com.commercejunction.model.VideoModel;
 import com.google.gson.JsonObject;
 
+import kotlin.reflect.KCallable;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -44,4 +46,10 @@ public interface AdminAPI {
 
     @GET(ApiURLs.PDF_LIST_URL)
     Call<ResponseBody> PDFList(@Path("CHAPTERID") int standardId);
+
+    @GET(ApiURLs.CHANGE_PASSWORD_URL)
+    Call<ResponseBody> ChangePassword(@Body JsonObject jsonRequest);
+
+    @GET(ApiURLs.EDIT_PROFILE_URL)
+    Call<ProfileModel> EditProfile(@Path("STUDENTID") int studentId);
 }
