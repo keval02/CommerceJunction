@@ -27,7 +27,24 @@ abstract class StandardListAdapter(var context: Activity, var standardList: Muta
 
         holder.itemView.std1.text = standardList[position].StandardName
 
+        if(standardList[position].isSelected)
+            holder.itemView.standardCV.setCardBackgroundColor(context.resources.getColor(R.color.colorAccent))
+        else
+            holder.itemView.standardCV.setCardBackgroundColor(context.resources.getColor(R.color.white))
+
+
         holder.itemView.std1.setOnClickListener {
+            if(standardList[position].isSelected){
+                holder.itemView.standardCV.setCardBackgroundColor(context.resources.getColor(R.color.white))
+            }else {
+                holder.itemView.standardCV.setCardBackgroundColor(context.resources.getColor(R.color.colorAccent))
+            }
+
+            standardList.forEach {
+                it.isSelected = it.StandardId == standardList[position].StandardId
+            }
+
+            notifyDataSetChanged()
             onStandardSelection(standardList[position].StandardId, standardList[position].StandardName)
 
         }

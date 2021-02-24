@@ -70,10 +70,21 @@
     <string name="usercontact">User Contact</string>
 
     <string name="no_standard_found">No Standards found!</string>
+    <string name="no_chapters_found">No Chapters found!</string>
+    <string name="no_notification_found">No Notifications found!</string>
     <string name="no_videos_found">No Videos found!</string>
     <string name="no_material_found">No Material found!</string>
+    <string name="no_subject_found">No Subject found!</string>
     <!-- Chapters list -->
     <string name="headTV_Chapters">Chapter</string>
     <string name="chapter_1">Chapter 1</string>
-
+    <string name="verification">Verification</string>
+    <string name="we_have_sent_an_otp_on_your_mobile_number_to_verify_please_enter_your_verification_code">We have sent an OTP on your Mobile Number to verify, please enter your Verification Code.</string>
+    <string name="resend">Resend</string>
+    <string name="if_you_didn_t_receive_code">If you didn\'t receive code ?</string>
+    <string name="verify">Verify</string>
+    <string name="please_enter_your_new_password">Please enter your New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="submit">Submit</string>
 </resources>

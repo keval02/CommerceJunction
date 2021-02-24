@@ -1,12 +1,17 @@
 package com.commercejunction.adapter
 
 import android.app.Activity
+import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.commercejunction.R
 import com.commercejunction.model.CheapterListData
 import kotlinx.android.synthetic.main.layout_chapter_list_items.view.*
+import kotlinx.android.synthetic.main.layout_chapter_list_items.view.iv
+import kotlinx.android.synthetic.main.layout_chapter_list_items.view.mainLayout
+import kotlinx.android.synthetic.main.layout_subject_list_items.view.*
 
 abstract class ChapterListAdapter(var context: Activity, var chapterList: MutableList<CheapterListData>): RecyclerView.Adapter<ChapterListAdapter.chapterListViewHolder>()  {
 
@@ -26,6 +31,14 @@ abstract class ChapterListAdapter(var context: Activity, var chapterList: Mutabl
     override fun onBindViewHolder(holder: chapterListViewHolder, position: Int) {
 
         holder.itemView.ch1.text = chapterList[position].ChapterName
+
+
+
+        /*Glide.with(context)
+            .load(chapterList[position].Icon)
+            .error(R.drawable.ic_calculator)
+            .placeholder(R.drawable.ic_calculator)
+            .into(holder.itemView.iv)*/
 
         holder.itemView.ch1.setOnClickListener {
             onchapterSelection(chapterList[position].ChapterId, chapterList[position].ChapterName)

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "287823079737",
+    "project_id": "commerce-junction",
+    "storage_bucket": "commerce-junction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287823079737:android:1021b3a4dd9d0c340260e8",
+        "android_client_info": {
+          "package_name": "com.commercejunction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287823079737-ck09lb7lbggcp9pjcp0abr37gua382s7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commercejunction",
+            "certificate_hash": "3c0138bf36049325500258fa1d42b0d5f54c8b08"
+          }
+        },
+        {
+          "client_id": "287823079737-j0ja3b4h2ndjlf69ea1hsi8qe8a9v25a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkZS3lOGqwAFoP4FFsXNgv6dfv-MvwqYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287823079737-j0ja3b4h2ndjlf69ea1hsi8qe8a9v25a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

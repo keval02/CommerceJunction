@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/_60sdp"
     android:layout_gravity="center"
     android:layout_margin="8dp"
-    android:id="@+id/mainLayout"
-    android:gravity="center">
+    android:gravity="center"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
 
     <LinearLayout
-        android:layout_width="@dimen/subject_grid_button_width"
-        android:layout_height="@dimen/subject_grid_button_height">
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="start|center"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:id="@+id/subject1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:gravity="center"
+            android:lines="3"
             android:textColor="#000000"
             android:textSize="14sp" />
 
-
     </LinearLayout>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

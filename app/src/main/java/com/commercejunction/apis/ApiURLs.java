@@ -19,12 +19,26 @@ public class ApiURLs {
 
     public static final String VIDEO_LIST_URL = "/Lists.svc/json/VideoList/{CHAPTERID}";
 
-    public static final String PDF_LIST_URL = "/Lists.svc/json/VideoList/{CHAPTERID}";
+    public static final String PDF_LIST_URL = "/Lists.svc/json/MaterialList/{CHAPTERID}";
 
-    public static final String CHANGE_PASSWORD_URL = "/Student.svc/json/ChangePassword/{STUDENTID}";
+    public static final String MATERIAL_LIST_URL = "/Lists.svc/json/TestMaterialList/{CHAPTERID}";
 
-    public static final String EDIT_PROFILE_URL = "/Student.svc/json/EditProfile/{STUDENTID}";
+    public static final String CHANGE_PASSWORD_URL = "/Student.svc/json/ChangePassword";
 
+    public static final String EDIT_PROFILE_URL = "/Student.svc/json/EditProfile";
 
+    public static final String GET_OTP = "/Student.svc/json/GetOTP/{MobileNo}";
 
+    public static final String VALIDATE_OTP = "/Student.svc/json/ValidateOTP";
+
+    public static final String FORGOT_PASSWORD = "/Student.svc/json/ForgotPassword";
+
+    public static final String NOTIFICATION_LISTING = "/Lists.svc/json/NotificationList/{ID}";
+
+    public static final String CONTENT_FOR_STATIC_PAGES = "/Lists.svc/json/DynamicPage/{ID}";
+
+    /*id = 1 about us
+2contact us
+3 privacy policy
+4 terms and condition*/
 }

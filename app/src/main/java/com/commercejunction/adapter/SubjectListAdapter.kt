@@ -28,14 +28,17 @@ abstract class SubjectListAdapter(var context: Activity, var standardList: Mutab
     override fun onBindViewHolder(holder: SubjectListViewHolder, position: Int) {
 
         holder.itemView.subject1.text = standardList[position].SubjectName
-        holder.itemView.mainLayout.setBackgroundColor(Color.parseColor(standardList[position].Color))
+
+        if(standardList[position].Color != null)
+                holder.itemView.mainLayout.setBackgroundColor(Color.parseColor(standardList[position].Color))
+        else
+            holder.itemView.mainLayout.setBackgroundColor(context.resources.getColor(R.color.colorAccent))
 
         Glide.with(context)
             .load(standardList[position].Icon)
             .error(R.drawable.ic_calculator)
             .placeholder(R.drawable.ic_calculator)
             .into(holder.itemView.iv)
-
 
         holder.itemView.subject1.setOnClickListener {
             onStandardSelection(standardList[position].SubjectId)

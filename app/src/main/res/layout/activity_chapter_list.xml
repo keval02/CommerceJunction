@@ -17,8 +17,8 @@
             android:background="@color/colorPrimaryDark">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 android:id="@+id/std_back"/>
             <TextView
@@ -29,7 +29,7 @@
                 android:layout_marginRight="25dp"
                 android:text="@string/headTV_Chapters"
                 android:textColor="#ffffff"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </Toolbar>
@@ -60,7 +60,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:visibility="gone"
-                    android:text="@string/no_standard_found"
+                    android:text="@string/no_chapters_found"
                     android:textColor="@color/colorPrimary"
                     android:textSize="22sp" />
             </FrameLayout>

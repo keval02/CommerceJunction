@@ -5,30 +5,77 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".constants.App"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ChapterListActivity"></activity>
-        <activity android:name=".activity.Subject1Activity" />
-        <activity android:name=".activity.Std1Activity" />
-        <activity android:name=".activity.HomeActivity" />
-        <activity android:name=".activity.GujaratiMediumActivity" />
-        <activity android:name=".activity.BoardActivity" />
-        <activity android:name=".activity.ForgotpasswordActivity" />
-        <activity android:name=".activity.MyprofileActivity" />
-        <activity android:name=".activity.RegistrationActivity" />
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".ContentPageActivity"></activity>
+        <activity android:name=".activity.NotificationListActivity" />
+        <activity android:name=".activity.VideoDisplayActivity" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VerifyOtpActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity
+            android:name=".activity.ChapterListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Subject1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Std1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GujaratiMediumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgotpasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyprofileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- FireBase -->
+        <service
+            android:name=".fcm.FcmMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- FireBase -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_baseline_notifications_24" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
     </application>
 
 </manifest>

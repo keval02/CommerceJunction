@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1">
 
         <ImageView
@@ -29,13 +29,11 @@
         android:gravity="center"
         android:layout_gravity="center">
 
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             app:cardCornerRadius="14dp"
-            app:cardBackgroundColor="@color/white"
             app:cardElevation="8dp">
 
             <LinearLayout

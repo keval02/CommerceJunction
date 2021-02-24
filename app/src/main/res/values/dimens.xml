@@ -34,7 +34,7 @@
     <!-- Registration Activity-->
     <dimen name="registration_head_tv_margin_top">10dp</dimen>
     <dimen name="registration_head_tv_margin_bottom">20dp</dimen>
-    <dimen name="registration_head_tv_textSize">24dp</dimen>
+    <dimen name="registration_head_tv_textSize">22dp</dimen>
     <dimen name="regidtration_text">16sp</dimen>
     <dimen name="registration_signinActivity_marginTop">10dp</dimen>
     <!-- Forgot Password Activity-->
@@ -42,7 +42,7 @@
     <dimen name="forgotPage_IV_width">96dp</dimen>
     <dimen name="forgotPage_IV_height">61dp</dimen>
     <dimen name="forgotPage_TV_margin_bottom">20dp</dimen>
-    <dimen name="forgotPage_TV_textSize">18sp</dimen>
+    <dimen name="forgotPage_TV_textSize">14sp</dimen>
     <!-- Board Activity-->
     <dimen name="card_radius_board">20dp</dimen>
     <dimen name="card_width_board">340dp</dimen>

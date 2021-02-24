@@ -4,7 +4,7 @@ data class LoginListData(
     val EmailId: String,
     val IsActive: Boolean,
     val IsDelete: Boolean,
-    val Mobile: String,
-    val Name: String,
+    var Mobile: String,
+    var Name: String,
     val StudentId: Int
 )

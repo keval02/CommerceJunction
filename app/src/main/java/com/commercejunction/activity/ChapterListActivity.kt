@@ -2,12 +2,12 @@ package com.commercejunction.activity
 
 import android.app.Dialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.Window
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.commercejunction.R
 import com.commercejunction.adapter.ChapterListAdapter
 import com.commercejunction.apis.AdminAPI
@@ -16,11 +16,10 @@ import com.commercejunction.constants.Global
 import com.commercejunction.constants.SharedPreferenceHelper
 import com.commercejunction.model.CheapterListData
 import com.commercejunction.model.CheapterModel
-import kotlinx.android.synthetic.main.activity_gujarati_medium.*
+import kotlinx.android.synthetic.main.activity_chapter_list.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.lang.Exception
 
 class ChapterListActivity : AppCompatActivity() {
     var adminAPI: AdminAPI? = null
@@ -38,14 +37,13 @@ class ChapterListActivity : AppCompatActivity() {
         progressDialog.setContentView(R.layout.custom_dialog_progress)
         preferenceHelper = SharedPreferenceHelper(applicationContext)
         try {
-            chapterSelection = preferenceHelper.getInt("subjectId", 0)
+            chapterSelection = intent.getIntExtra("subjectId", 0)
         } catch (e: Exception) {
             Log.e("exception", e.message)
         }
 
         std_back.setOnClickListener {
-            val intent = Intent(this, BoardActivity::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
         getAllChapters(chapterSelection)
     }
@@ -62,11 +60,18 @@ class ChapterListActivity : AppCompatActivity() {
                     ChapterListAdapter =
                         object : ChapterListAdapter(this@ChapterListActivity, ChapterList) {
                             override fun onchapterSelection(id: Int, chapterName: String) {
-
+                                val intent =
+                                    Intent(this@ChapterListActivity, Subject1Activity::class.java)
+                                intent.putExtra("chapterId", id)
+                                startActivity(intent)
                             }
                         }
 
-                    val layoutManager = GridLayoutManager(this@ChapterListActivity, 2)
+                    val layoutManager = LinearLayoutManager(
+                        this@ChapterListActivity,
+                        LinearLayoutManager.VERTICAL,
+                        false
+                    )
                     rv_location.layoutManager = layoutManager
                     rv_location.adapter = ChapterListAdapter
                     rv_location.visibility = View.VISIBLE

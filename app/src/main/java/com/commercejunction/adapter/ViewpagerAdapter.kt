@@ -5,13 +5,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.commercejunction.EBooksList
+import com.commercejunction.MaterialList
 import com.commercejunction.VideosList
 
 
 class Viewpager(fm: FragmentManager, context: Context, subjectId : Int) :
     FragmentStatePagerAdapter(fm) {
     val PAGE_COUNT = 2
-    private val tabTitles = arrayOf("Videos", "E-Books")
+    private val tabTitles = arrayOf("Videos", "E-Books", "Material")
     private val context: Context
     var subject = subjectId
     override fun getItem(position: Int): Fragment {
@@ -21,6 +22,9 @@ class Viewpager(fm: FragmentManager, context: Context, subjectId : Int) :
             }
             1 -> {
                 EBooksList(subject)
+            }
+            2 -> {
+                MaterialList(subject)
             }
             else -> {
                 VideosList(subject)

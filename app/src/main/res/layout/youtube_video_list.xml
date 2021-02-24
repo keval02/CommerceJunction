@@ -1,270 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_marginTop="10dp"
-    android:layout_gravity="center"
-    android:paddingLeft="6dp"
-    tools:context="com.commercejunction.VideosList">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp">
 
-    <TextView
-        android:id="@+id/txt_no_data_found"
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/no_videos_found"
-        android:textColor="@color/colorPrimary"
-        android:textSize="22sp" />
+        android:orientation="vertical"
+        android:paddingStart="6dp"
+        tools:context="com.commercejunction.VideosList">
 
-     <!--<GridLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content">
-
-            <FrameLayout>
-                <ImageView
-                    android:id="@+id/imageViewFlag"
-                    android:layout_width="164dp"
-                    android:layout_height="105dp"
-                    android:layout_row="0"
-                    android:layout_rowSpan="2"
-                    android:layout_column="0"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/video1" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_play_circle_filled_24" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textViewCountry"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:text="Sound Properties"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/textViewCapital"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:text="40 mins"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14dp" />
-        </GridLayout>
-
-        <GridLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_location"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="130dp">
+            android:layout_height="match_parent"
 
-            <FrameLayout>
+            android:visibility="gone" />
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="164dp"
-                    android:layout_height="105dp"
-                    android:layout_row="0"
-                    android:layout_rowSpan="2"
-                    android:layout_column="0"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/blue_bg" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_play_circle_filled_24" />
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:text="Practice in waves"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:text="5 mins"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14dp" />
-        </GridLayout>
-
-        <GridLayout
+        <TextView
+            android:id="@+id/txt_no_data_found"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="250dp">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/no_videos_found"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:visibility="gone" />
 
-            <FrameLayout>
-
-                <ImageView
-                    android:layout_width="164dp"
-                    android:layout_height="105dp"
-                    android:layout_row="0"
-                    android:layout_rowSpan="2"
-                    android:layout_column="0"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/video1" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_play_circle_filled_24" />
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:text="Sound Properties"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:text="40 mins"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14dp" />
-        </GridLayout>
-
-        <GridLayout
+        <!--<GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="370dp">
+            android:layout_height="wrap_content">
 
-            <FrameLayout>
+               <FrameLayout>
+                   <ImageView
+                       android:id="@+id/imageViewFlag"
+                       android:layout_width="164dp"
+                       android:layout_height="105dp"
+                       android:layout_row="0"
+                       android:layout_rowSpan="2"
+                       android:layout_column="0"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/video1" />
 
-                <ImageView
-                    android:layout_width="164dp"
-                    android:layout_height="105dp"
-                    android:layout_row="0"
-                    android:layout_rowSpan="2"
-                    android:layout_column="0"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/blue_bg" />
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/ic_baseline_play_circle_filled_24" />
+               </FrameLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_play_circle_filled_24" />
-            </FrameLayout>
+               <TextView
+                   android:id="@+id/textViewCountry"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:text="Sound Properties"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="20dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:text="Practice in waves"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp" />
+               <TextView
+                   android:id="@+id/textViewCapital"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:text="40 mins"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="14dp" />
+           </GridLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:text="5 mins"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14dp" />
-        </GridLayout>
+           <GridLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="130dp">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="250dp">
+               <FrameLayout>
 
-            <FrameLayout>
+                   <ImageView
+                       android:id="@+id/imageView"
+                       android:layout_width="164dp"
+                       android:layout_height="105dp"
+                       android:layout_row="0"
+                       android:layout_rowSpan="2"
+                       android:layout_column="0"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/blue_bg" />
 
-                <ImageView
-                    android:layout_width="164dp"
-                    android:layout_height="105dp"
-                    android:layout_row="0"
-                    android:layout_rowSpan="2"
-                    android:layout_column="0"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/video1" />
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/ic_baseline_play_circle_filled_24" />
+               </FrameLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_play_circle_filled_24" />
-            </FrameLayout>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:text="Practice in waves"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="20dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:text="Sound Properties"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp" />
+               <TextView
+                   android:id="@+id/tv2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:text="5 mins"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="14dp" />
+           </GridLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:text="40 mins"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14dp" />
-        </GridLayout>-->
+           <GridLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="250dp">
+
+               <FrameLayout>
+
+                   <ImageView
+                       android:layout_width="164dp"
+                       android:layout_height="105dp"
+                       android:layout_row="0"
+                       android:layout_rowSpan="2"
+                       android:layout_column="0"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/video1" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/ic_baseline_play_circle_filled_24" />
+               </FrameLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:text="Sound Properties"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="20dp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:text="40 mins"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="14dp" />
+           </GridLayout>
+
+           <GridLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="370dp">
+
+               <FrameLayout>
+
+                   <ImageView
+                       android:layout_width="164dp"
+                       android:layout_height="105dp"
+                       android:layout_row="0"
+                       android:layout_rowSpan="2"
+                       android:layout_column="0"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/blue_bg" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/ic_baseline_play_circle_filled_24" />
+               </FrameLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:text="Practice in waves"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="20dp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:text="5 mins"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="14dp" />
+           </GridLayout>
+
+           <GridLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="250dp">
+
+               <FrameLayout>
+
+                   <ImageView
+                       android:layout_width="164dp"
+                       android:layout_height="105dp"
+                       android:layout_row="0"
+                       android:layout_rowSpan="2"
+                       android:layout_column="0"
+                       android:scaleType="fitXY"
+                       android:src="@drawable/video1" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/ic_baseline_play_circle_filled_24" />
+               </FrameLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:text="Sound Properties"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="20dp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_row="0"
+                   android:layout_column="1"
+                   android:layout_columnWeight="1"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:text="40 mins"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="14dp" />
+           </GridLayout>-->
 
 
-
-</FrameLayout>
-</ScrollView>
+    </FrameLayout>
+</LinearLayout>

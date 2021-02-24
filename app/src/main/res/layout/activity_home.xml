@@ -1,108 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    app:layout_gravity="center"
-    android:background="@drawable/background_new">
+    android:background="@drawable/background_new"
+    app:layout_gravity="center">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
-    tool:showIn="navigation_view">
-
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawer_layout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tool:showIn="navigation_view">
 
-        <LinearLayout
-            android:id="@+id/containerView"
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-
-            <include
-                layout="@layout/appbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="66dp"
-                android:layout_marginTop="30dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/user_profileIV"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/ic_user"/>
-
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:text="Guset User"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold|italic" />
-
-                <TextView
-                    android:id="@+id/userstd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="100dp"
-                    android:text="User class"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16dp"
-                    android:textStyle="bold|italic" />
-                <ImageView
-                    android:id="@+id/editStd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="180dp"
-                    android:src="@drawable/ic_baseline_edit_24"
-                    />
-
-            </RelativeLayout>
-
-
-            <include
-                layout="@layout/activity_std1"
+            <LinearLayout
+                android:id="@+id/containerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                android:layout_weight="1" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </LinearLayout>
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@color/white"
-            android:divider="#FFFFFF"
-            android:dividerHeight="1dp"
-            app:headerLayout="@layout/header"
-            app:itemTextColor="@color/darkGrey"
-            app:menu="@menu/main_menu" />
+                <include
+                    layout="@layout/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-    </androidx.drawerlayout.widget.DrawerLayout>
 
-</LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_profileIV"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:src="@drawable/user_image_preview_bg" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_90sdp"
+                        android:text="Guset User"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/userstd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_90sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="User class"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold|italic" />
+
+                    <ImageView
+                        android:id="@+id/editStd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_168sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:src="@drawable/ic_baseline_edit_24" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_110sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center"
+                        android:text="Hi,what would you learn today?"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txt_no_data_found"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/no_subject_found"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_18ssp"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="@dimen/_260sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                android:divider="#FFFFFF"
+                android:dividerHeight="@dimen/_1sdp"
+                app:headerLayout="@layout/header"
+                app:itemTextColor="@color/darkGrey"
+                app:menu="@menu/main_menu" />
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

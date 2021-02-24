@@ -13,6 +13,8 @@ import com.commercejunction.apis.ServiceGenerator
 import com.commercejunction.constants.Global
 import com.commercejunction.constants.SharedPreferenceHelper
 import com.commercejunction.model.LoginModel
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.iid.FirebaseInstanceId
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import kotlinx.android.synthetic.main.activity_login.*
@@ -58,34 +60,44 @@ class LoginActivity : AppCompatActivity() {
 
     private fun CheckLoginDetails(userEmail: String, password: String) {
         Global.showProgressDialog(progressDialog, true, this)
-        val jsonRequest = JsonObject();
-        jsonRequest.addProperty("EmailId", userEmail)
-        jsonRequest.addProperty("Password", password)
-
-        val response: Call<LoginModel>? = adminAPI?.LoginUserName(jsonRequest)
-        response?.enqueue(object : Callback<LoginModel> {
-            override fun onResponse(call: Call<LoginModel>, response: Response<LoginModel>) {
-                Log.e("Response", "" + response.body())
-                Global.showProgressDialog(progressDialog, false, applicationContext)
-                val responseData = response.body()
-                if (responseData?.ResponseCode == 1) {
-                    val userData = Gson().toJson(response.body())
-                    preferenceHelper.setString("userData" , userData)
-                    preferenceHelper.setBoolean("isLoggedIn" , true)
-                    val intent = Intent(this@LoginActivity, BoardActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-                    startActivity(intent)
-                    finish()
-                } else {
-                    Global.displayToastMessage("Something went wrong!", applicationContext)
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    return@OnCompleteListener
                 }
-            }
 
-            override fun onFailure(call: Call<LoginModel>, t: Throwable) {
-                Log.e("Failure", "" + t.message)
-                Global.showProgressDialog(progressDialog, false, applicationContext)
-                Global.displayToastMessage("Something went wrong!", applicationContext)
-            }
-        })
+                // Get new Instance ID token
+                val token = task.result!!.token
+                val jsonRequest = JsonObject();
+                jsonRequest.addProperty("EmailId", userEmail)
+                jsonRequest.addProperty("Password", password)
+                jsonRequest.addProperty("DeviceTocken", token)
+
+                val response: Call<LoginModel>? = adminAPI?.LoginUserName(jsonRequest)
+                response?.enqueue(object : Callback<LoginModel> {
+                    override fun onResponse(call: Call<LoginModel>, response: Response<LoginModel>) {
+                        Log.e("Response", "" + response.body())
+                        Global.showProgressDialog(progressDialog, false, applicationContext)
+                        val responseData = response.body()
+                        if (responseData?.ResponseCode == 1) {
+                            val userData = Gson().toJson(response.body())
+                            preferenceHelper.setString("userData" , userData)
+                            preferenceHelper.setBoolean("isLoggedIn" , true)
+                            val intent = Intent(this@LoginActivity, BoardActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Global.displayToastMessage("Something went wrong!", applicationContext)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<LoginModel>, t: Throwable) {
+                        Log.e("Failure", "" + t.message)
+                        Global.showProgressDialog(progressDialog, false, applicationContext)
+                        Global.displayToastMessage("Something went wrong!", applicationContext)
+                    }
+                })
+            })
     }
 }

@@ -16,6 +16,11 @@ object Global {
     var isLoggedIn = "isLoggedIn"
     var userData = "userData"
     var isEnteredFirstTime = "isEnteredFirstTime"
+    var keyWebView = "webViewURL"
+    var keyWebViewTitle = "webViewTitle"
+    var videoId = "videoID"
+    var contentPageTitle = "title"
+    var contentPageDescription = "description"
 
 
     fun displayToastMessage(message: String?, context: Context?) {

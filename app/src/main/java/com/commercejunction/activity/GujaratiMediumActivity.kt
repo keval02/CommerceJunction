@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.view.Window
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.commercejunction.R
 import com.commercejunction.adapter.StandardListAdapter
 import com.commercejunction.apis.AdminAPI
@@ -31,6 +32,8 @@ class GujaratiMediumActivity : AppCompatActivity() {
     lateinit var standardListAdapter : StandardListAdapter
     var standardList : ArrayList<StandardListData> = ArrayList()
     lateinit var preferenceHelper: SharedPreferenceHelper
+    var standardSelection : Int = -1
+    var standardSelectionName : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gujarati_medium)
@@ -49,6 +52,19 @@ class GujaratiMediumActivity : AppCompatActivity() {
             val intent = Intent(this,BoardActivity::class.java)
             startActivity(intent)
         }
+
+        standard_Select.setOnClickListener {
+            if(standardSelection == -1){
+                Global.displayToastMessage("Please select standard!", applicationContext)
+            }else {
+                val  intent = Intent(this@GujaratiMediumActivity,HomeActivity::class.java)
+                preferenceHelper.setInt("standardSelection" , standardSelection)
+                preferenceHelper.setString("standardName" , standardSelectionName)
+                startActivity(intent)
+                finish()
+            }
+        }
+
         getAllBoards(mediumSelection)
     }
 
@@ -66,16 +82,12 @@ class GujaratiMediumActivity : AppCompatActivity() {
                             id: Int,
                             standardName: String
                         ) {
-                            val  intent = Intent(this@GujaratiMediumActivity,HomeActivity::class.java)
-                            preferenceHelper.setInt("standardSelection" , id)
-                            preferenceHelper.setString("standardName" , standardName)
-
-                            startActivity(intent)
-                            finish()
+                            standardSelection = id
+                            standardSelectionName = standardName
                         }
                     }
 
-                    val layoutManager = GridLayoutManager(this@GujaratiMediumActivity, 2)
+                    val layoutManager = LinearLayoutManager(this@GujaratiMediumActivity, LinearLayoutManager.VERTICAL, false)
                     rv_location.layoutManager = layoutManager
                     rv_location.adapter = standardListAdapter
                     rv_location.visibility = View.VISIBLE

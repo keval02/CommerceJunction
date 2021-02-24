@@ -5,4 +5,5 @@ data class SubjectListData (
     val SubjectName: String,
     val Icon: String,
     val Color : String
+
 )

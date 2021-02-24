@@ -65,6 +65,8 @@ class BoardActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+
     }
 
     private fun getAllBoards() {
