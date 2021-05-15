@@ -63,6 +63,7 @@ class ChapterListActivity : AppCompatActivity() {
                                 val intent =
                                     Intent(this@ChapterListActivity, Subject1Activity::class.java)
                                 intent.putExtra("chapterId", id)
+                                intent.putExtra("chapterName" , chapterName)
                                 startActivity(intent)
                             }
                         }

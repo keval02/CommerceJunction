@@ -2,6 +2,7 @@ package com.commercejunction.constants
 
 import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Window
@@ -21,6 +22,7 @@ object Global {
     var videoId = "videoID"
     var contentPageTitle = "title"
     var contentPageDescription = "description"
+    val appURL = "https://play.google.com/store/apps/details?id=com.commercejunction&hl=en"
 
 
     fun displayToastMessage(message: String?, context: Context?) {
@@ -41,5 +43,13 @@ object Global {
         else{
             progressDialog.dismiss()
         }
+    }
+
+     fun shareAppViaOtherApps(context: Context) {
+        val shareIntent = Intent()
+        shareIntent.action = Intent.ACTION_SEND
+        shareIntent.putExtra(Intent.EXTRA_TEXT , appURL)
+        shareIntent.type = "text/plain"
+         context.startActivity(shareIntent)
     }
 }

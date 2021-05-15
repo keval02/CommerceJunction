@@ -45,7 +45,7 @@
                         android:layout_width="@dimen/_45sdp"
                         android:layout_height="@dimen/_45sdp"
                         android:layout_marginLeft="@dimen/_16sdp"
-                        android:src="@drawable/user_image_preview_bg" />
+                        android:src="@drawable/student_white" />
 
                     <TextView
                         android:id="@+id/username"

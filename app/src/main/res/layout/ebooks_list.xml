@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/no_videos_found"
+            android:text="@string/no_ebooks_found"
             android:textColor="@color/colorPrimary"
             android:textSize="22sp"
             android:visibility="gone" />

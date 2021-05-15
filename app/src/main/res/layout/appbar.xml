@@ -8,9 +8,10 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="end|center"
+        android:layout_gravity="end"
         android:orientation="horizontal">
 
         <ImageView

@@ -19,6 +19,7 @@ import retrofit2.Response
 @Suppress("DEPRECATION")
 class Subject1Activity : AppCompatActivity() {
     var subjectId = 0
+    var subjectName = ""
     var adminAPI: AdminAPI? = null
     var totalVideos : Int = 0
     var totalBooks : Int = 0
@@ -28,10 +29,12 @@ class Subject1Activity : AppCompatActivity() {
         adminAPI = ServiceGenerator.getAPIClass()
         try {
             subjectId = intent.getIntExtra("chapterId", 0);
+            subjectName = intent.getStringExtra("chapterName")
         } catch (e: Exception) {
 
         }
 
+        cheapterNameTV.text = subjectName
         subject1_back.setOnClickListener {
             onBackPressed()
         }

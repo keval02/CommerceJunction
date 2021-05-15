@@ -42,6 +42,9 @@ class NotificationListActivity : AppCompatActivity() {
         } catch (e: Exception) {
 
         }
+        std_back.setOnClickListener {
+            onBackPressed()
+        }
         getAllNotification()
     }
 

@@ -7,6 +7,7 @@
     <application
         android:name=".constants.App"
         android:allowBackup="true"
+        android:configChanges="orientation|screenSize"
         android:hardwareAccelerated="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
@@ -14,9 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ContentPageActivity"></activity>
+        <activity android:name=".activity.PdfViewActivity"></activity>
+        <activity android:name=".ContentPageActivity" />
         <activity android:name=".activity.NotificationListActivity" />
-        <activity android:name=".activity.VideoDisplayActivity" />
+        <activity
+            android:name=".activity.VideoDisplayActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity.ChangePasswordActivity"
             android:screenOrientation="portrait" />

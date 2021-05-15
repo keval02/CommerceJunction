@@ -32,14 +32,6 @@ abstract class ChapterListAdapter(var context: Activity, var chapterList: Mutabl
 
         holder.itemView.ch1.text = chapterList[position].ChapterName
 
-
-
-        /*Glide.with(context)
-            .load(chapterList[position].Icon)
-            .error(R.drawable.ic_calculator)
-            .placeholder(R.drawable.ic_calculator)
-            .into(holder.itemView.iv)*/
-
         holder.itemView.ch1.setOnClickListener {
             onchapterSelection(chapterList[position].ChapterId, chapterList[position].ChapterName)
 

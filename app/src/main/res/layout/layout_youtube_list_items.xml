@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/watchVideoLayout"
     android:layout_width="match_parent"
+    android:layout_margin="@dimen/_8sdp"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
@@ -60,6 +61,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:text="40 mins"
+                    android:visibility="gone"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14dp" />
 

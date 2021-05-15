@@ -63,7 +63,7 @@ class EBooksList(subjectId : Int): Fragment() {
 
                         }
 
-                    val layoutManager = GridLayoutManager(root.context, 2)
+                    val layoutManager = GridLayoutManager(root.context, 1)
                     rv_location.layoutManager = layoutManager
                     rv_location.adapter = videoListAdapter
                     rv_location.visibility = View.VISIBLE

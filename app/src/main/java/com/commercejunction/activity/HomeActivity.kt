@@ -74,6 +74,11 @@ open class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         setSupportActionBar(StdToolbar)
         StdToolbar.title = "Dashboard"
         shareIV.visibility = View.VISIBLE
+
+        shareIV.setOnClickListener {
+            Global.shareAppViaOtherApps(this)
+        }
+
         notificationIV.setOnClickListener {
             val intent = Intent(this, NotificationListActivity::class.java)
             startActivity(intent)

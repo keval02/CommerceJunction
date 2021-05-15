@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CommerceJunction</string>
+    <string name="app_name">The Commerce Junction</string>
     <!-- Login Activity -->
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
@@ -23,7 +23,7 @@
     <string name="forgotPassword_email_editText">\tEmail-id</string>
     <string name="forgotPassword_button_text">RESET PASSWORD</string>
     <string name="forgot_passwordPage_head1">Forgot Password?</string>
-    <string name="forgot_passwordPage_head2">We just need your registered email address</string>
+    <string name="forgot_passwordPage_head2">We just need your registered contact number</string>
     <!-- Board Activity -->
     <string name="board_title">Medium</string>
     <string name="boardTV_Gujarati">ગુજરાતી માધ્યમ</string>
@@ -73,6 +73,7 @@
     <string name="no_chapters_found">No Chapters found!</string>
     <string name="no_notification_found">No Notifications found!</string>
     <string name="no_videos_found">No Videos found!</string>
+    <string name="no_ebooks_found">No E-books found!</string>
     <string name="no_material_found">No Material found!</string>
     <string name="no_subject_found">No Subject found!</string>
     <!-- Chapters list -->

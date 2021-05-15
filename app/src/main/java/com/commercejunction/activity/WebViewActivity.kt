@@ -26,7 +26,7 @@ class WebViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_web_view)
         try {
             webViewURL = intent.getStringExtra(keyWebView)
-            webViewURL = webViewURL.replace(" ", "%20")
+            //webViewURL = webViewURL.replace(" ", "%20")
             title = intent.getStringExtra(keyWebViewTitle)
             boardTV2.text = title
         } catch (e: Exception) {

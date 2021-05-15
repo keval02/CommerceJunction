@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.commercejunction.R
+import com.commercejunction.activity.PdfViewActivity
+import com.commercejunction.constants.Global
+import com.commercejunction.constants.Global.keyWebView
 import com.commercejunction.model.PDFListData
 import kotlinx.android.synthetic.main.layout_ebook_list_items.view.*
 
@@ -41,7 +44,12 @@ abstract class EBooksListAdapter(
             intent.putExtra(keyWebView, url)
             intent.putExtra(Global.keyWebViewTitle, chapterList[position].MaterialName)
             context.startActivity(intent)*/
-            openPDF(url)
+            val intent = Intent(context, PdfViewActivity::class.java)
+            intent.putExtra(keyWebView, url)
+            intent.putExtra(Global.keyWebViewTitle, chapterList[position].MaterialName)
+            context.startActivity(intent)
+
+            //openPDF(url)
         }
 
     }

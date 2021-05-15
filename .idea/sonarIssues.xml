@@ -88,6 +88,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/commercejunction/activity/PdfViewActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/commercejunction/activity/RegistrationActivity.kt">
           <value>
             <set />
@@ -473,6 +478,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_pdf_view.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_registrartion.xml">
           <value>
             <set />
@@ -614,6 +624,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../GIFOLA/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Jogo/app/src/main/java/com/jogo/app/adapters/AdminSearchListAdapter.kt">
           <value>
             <set />
           </value>
